@@ -97,9 +97,9 @@ rust/target/
 rust/Cargo.lock
 rust/.cargo
 r/lib
-scala/mal.jar
-scala/target
-scala/project
+scala*/mal.jar
+scala*/target
+scala*/project
 tcl/mal.tcl
 vb/*.exe
 vb/*.dll
