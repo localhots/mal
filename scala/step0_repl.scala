@@ -1,3 +1,5 @@
+import scala.io.StdIn.readLine
+
 object step0_repl {
     val prompt = "user> "
 
