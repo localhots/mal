@@ -4,15 +4,28 @@ object MalCompiler {
     }
 
     def repl() = {
+        replRead("user> ", replEval)
+    }
+
+    def replRead(prompt: String, handler: (String) => Unit) = {
         var ok = true
         while (ok) {
-            printf("user> ")
+            print(prompt)
 
             val line = readLine()
             if (line == null) {
                 ok = false
+            } else {
+                handler(line)
             }
-            println(line)
         }
+    }
+
+    def replEval(expr: String) = {
+        replPrint(expr)
+    }
+
+    def replPrint(result: String) = {
+        println(result)
     }
 }
